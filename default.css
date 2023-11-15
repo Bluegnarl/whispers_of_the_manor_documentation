@@ -28,13 +28,14 @@ p {
   font-weight: 500;
 }
 
-/* NAVIGATION BAR */
+/* --------NAVIGATION BAR-------- */
 
 nav {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
   background: linear-gradient(
       180deg,
       rgba(255, 255, 255, 0.1) 0%,
@@ -45,6 +46,29 @@ nav {
   position: sticky;
   z-index: 10;
 }
+
+/* NAVIGATION BUTTONS */
+
+.nav-buttons{
+  display: none;
+  position: absolute;
+  gap: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+a{
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 24px;
+  color: var(--primary);
+}
+
+.active-page{
+  color: var(--on-surface-1);
+}
+
+/* MENU BUTTON */
 
 .menu-icon {
   display: flex;
@@ -60,7 +84,28 @@ nav {
   background: var(--primary);
 }
 
-/* HEADER */
+/* NAVIGATION PLAY NOW BUTTON */
+
+.play-now-medium{
+  display: none;
+  border: solid 2px var(--primary);
+  border-radius: 100px;
+  padding: 12px 20px 12px 20px;
+  gap: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+  user-select: none;
+}
+
+.play-now-medium h2{
+  font-size: 20px;
+}
+
+.play-now-medium:hover{
+  background: var(--primary);
+}
+
+/* --------HEADER-------- */
 
 header {
   display: flex;
@@ -73,6 +118,8 @@ header {
   gap: 12px;
   /* background: center/cover no-repeat url(./assets/images/defaultImg.png); */
 }
+
+/* HEADER'S BACKGROUND VIDEO */
 
 video {
   height: 100%;
@@ -87,6 +134,8 @@ video {
   width: 100%;
 }
 
+/* HEADER'S CONTENT */
+
 .header-content {
   display: flex;
   flex-direction: column;
@@ -99,6 +148,8 @@ video {
   text-align: center;
   color: var(--on-surface-1);
 }
+
+/* HEADER PLAY NOW BUTTON */
 
 .play-now-small {
   display: flex;
@@ -117,4 +168,18 @@ video {
 
 .play-now-small:hover {
   background: var(--primary);
+}
+
+/* --------MEDIA SCREEN-------- */
+
+@media screen and (min-width: 900px) {
+  .menu-icon{
+    display: none;
+  }
+  .play-now-medium{
+    display: flex;
+  }
+  .nav-buttons{
+    display: flex;
+  }
 }
