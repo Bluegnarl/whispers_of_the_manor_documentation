@@ -1,0 +1,120 @@
+@import url(./assets/styles/variables.css);
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--surface-1);
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  color: var(--on-surface-0);
+  font-family: "Lato", sans-serif;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* NAVIGATION BAR */
+
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    rgba(0, 0, 0, 0.6);
+  padding: 18px 24px 18px 24px;
+  position: sticky;
+  z-index: 10;
+}
+
+.menu-icon {
+  display: flex;
+  border-radius: 100px;
+  padding: 10px 16px 10px 16px;
+  border: solid 2px var(--primary);
+  cursor: pointer;
+  transition: background 0.2s;
+  user-select: none;
+}
+
+.menu-icon:hover {
+  background: var(--primary);
+}
+
+/* HEADER */
+
+header {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  gap: 12px;
+  /* background: center/cover no-repeat url(./assets/images/defaultImg.png); */
+}
+
+video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.video {
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  max-width: 360px;
+}
+
+.header-text {
+  text-align: center;
+  color: var(--on-surface-1);
+}
+
+.play-now-small {
+  display: flex;
+  border: solid 2px var(--primary);
+  border-radius: 100px;
+  padding: 8px 16px 8px 16px;
+  gap: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+  user-select: none;
+}
+
+.play-now-small h2 {
+  font-size: 16px;
+}
+
+.play-now-small:hover {
+  background: var(--primary);
+}
