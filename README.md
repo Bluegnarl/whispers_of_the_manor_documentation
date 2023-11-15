@@ -1,10 +1,12 @@
-<h2>My Game’s Flowchart</h2>
-Gameplay
-This game is a point-and-click where you have to complete the story by solving riddles.
-For example, when you find a key, you will try to use it to open a door/chest which contains an item to use somewhere else. You will also be able to retrieve clues from documents to complete some of the riddles.
-Camera : The camera follows the player so that he stays in the middle of the screen.
-Player movement : The player moves where a valid click happens.
-Element interaction : The player has to be around the element if he wants to interact with it.
+<h1>My Game’s Flowchart</h1>
+<h2>Gameplay</h2>
+<p>This game is a point-and-click where you have to complete the story by solving riddles.
+For example, when you find a key, you will try to use it to open a door/chest which contains an item to use somewhere else. You will also be able to retrieve clues from documents to complete some of the riddles.</p>
+<ul>
+  <li>Camera : The camera follows the player so that he stays in the middle of the screen.</li>
+  <li>Player movement : The player moves where a valid click happens.</li>
+  <li>Element interaction : The player has to be around the element if he wants to interact with it.</li>
+</ul>
 As you collect important documents or items throughout the story, another site/page representing the investigation pinboard will fill up and guide you through the story. When you get lost, take a look at it.
 Mobile adaptation
 Most of the players will be on mobile, so we have to adapt the gameplay for them.
