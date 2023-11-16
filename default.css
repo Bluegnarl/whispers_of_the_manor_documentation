@@ -37,14 +37,15 @@ p {
   color: var(--on-surface-1);
 }
 
-/* --------NAVIGATION BAR-------- */
+/* ----------------NAVIGATION BAR---------------- */
 
 nav {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
+  position: sticky;
+  top: 0;
   background: linear-gradient(
       180deg,
       rgba(255, 255, 255, 0.1) 0%,
@@ -52,7 +53,6 @@ nav {
     ),
     rgba(0, 0, 0, 0.6);
   padding: 18px 24px 18px 24px;
-  position: sticky;
   z-index: 10;
 }
 
@@ -114,7 +114,7 @@ a{
   background: var(--primary);
 }
 
-/* --------HEADER-------- */
+/* ----------------HEADER---------------- */
 
 header {
   display: flex;
@@ -150,7 +150,7 @@ video {
   width: 100%;
   justify-content: center;
   align-items: center;
-  padding: 50px;
+  padding: 50px 0 70px 0;
   gap: 12px;
 }
 .header-content {
@@ -163,6 +163,7 @@ video {
 
 .header-text {
   text-align: center;
+  font-size: 14px;
 }
 
 /* HEADER PLAY NOW BUTTON */
@@ -186,19 +187,19 @@ video {
   background: var(--primary);
 }
 
-/* --------FIRST PART-------- */
+/* ----------------FIRST PART---------------- */
 
 .first-part{
   display: flex;
   flex-direction: column;
-  padding: 24px;
-  gap: 24px;
+  padding: 48px 24px 24px 24px;
+  gap: 12px;
 }
 .first-part-content{
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 24px;
+  gap: 12px;
 }
 .first-part-content img{
   width: 100%;
@@ -210,15 +211,48 @@ video {
   flex-direction: column;
   gap: 12px;
 }
-.first-part-content p{
-  font-size: 16px;
+
+/* ----------------MEDIA SCREEN---------------- */
+
+@media screen and (min-width: 450px){
+  h2{
+    font-size: 32px;
+  }
+  h3{
+    font-size: 24px;
+  }
+  p{
+    font-size: 16px;
+  }
+
+  .header-text {
+    font-size: 16px;
+  }
+
+  .first-part{
+    gap: 16px;
+  }
+  .first-part-content{
+    gap: 16px;
+  }
 }
 
-/* --------MEDIA SCREEN-------- */
-
 @media screen and (min-width: 650px){
-  .header-container{
-    margin-right: 45%;
+  .first-part{
+    padding: 48px 36px 36px 36px;
+    gap: 24px;
+  }
+  .first-part-content{
+    gap: 24px;
+  }
+  h2{
+    font-size: 36px;
+  }
+  h3{
+    font-size: 24px;
+  }
+  p{
+    font-size: 20px;
   }
 }
 
@@ -230,13 +264,13 @@ video {
     display: flex;
   }
   h2{
-    font-size: 48px;
+    font-size: 36px;
   }
   h3{
     font-size: 32px;
   }
   p{
-    font-size: 24px;
+    font-size: 20px;
   }
   
   .play-now-nav {
@@ -255,11 +289,14 @@ video {
 
   .header-container{
     gap: 20px;
-    padding: 100px;
+    padding: 100px 0 150px 0;
     margin: 0;
   }
   .header-content {
     max-width: 410px;
+  }
+  .header-text {
+    font-size: 20px;
   }
   .play-now-header {
     padding: 12px 24px 12px 24px;
@@ -268,14 +305,13 @@ video {
     font-size: 24px;
   }
 
-  /* --------FIRST PART-------- */  
-
   .first-part{
-    padding: 80px;
+    padding: 40px;
   }
   .first-part-content{
     flex-direction: row;
     width: 100%;
+    gap: 32px;
   }
   .first-part-content img{
     width: 50%;
@@ -283,17 +319,58 @@ video {
     object-fit: cover;
   }
   .first-part-text{
-    gap: 24px;
-    padding-left: 48px;
-  }
-  .first-part-content p{
-    font-size: 26px;
+    gap: 16px;
+    margin: 8px 0 8px 0;
   }
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1150px) {
+  h2{
+    font-size: 40px;
+  }
+  p{
+    font-size: 24px;
+  }
+
   .header-container{
     margin-right: 50%;
-    padding: 120px 120px 200px 120px;
+    padding: 120px 0 200px 0;
+  }
+  .first-part{
+    padding: 60px;
+    gap: 24px;
+  }
+  .first-part-content{
+    gap: 36px;
+  }
+  .first-part-text{
+    gap: 16px;
+  }
+}
+
+@media screen and (min-width: 1350px) {
+  h2{
+    font-size: 48px;
+  }
+  p{
+    font-size: 28px;
+  }
+  
+  .first-part{
+    padding: 80px;
+  }
+  .first-part-text{
+    gap: 16px;
+    margin: 16px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  p{
+    font-size: 32px;
+  }
+  
+  .header-container{
+    padding: 150px 0 270px 0;
   }
 }
