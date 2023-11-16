@@ -16,16 +16,25 @@ body {
   height: 100vh;
   color: var(--on-surface-0);
   font-family: "Lato", sans-serif;
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 
-h2 {
+h2{
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+}
+h3 {
   font-size: 20px;
   font-weight: 800;
 }
-
 p {
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
+  color: var(--on-surface-1);
 }
 
 /* --------NAVIGATION BAR-------- */
@@ -97,7 +106,7 @@ a{
   user-select: none;
 }
 
-.play-now-nav h2{
+.play-now-nav h3{
   font-size: 20px;
 }
 
@@ -123,6 +132,7 @@ video {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  object-position: bottom;
 }
 
 .video {
@@ -153,7 +163,6 @@ video {
 
 .header-text {
   text-align: center;
-  color: var(--on-surface-1);
 }
 
 /* HEADER PLAY NOW BUTTON */
@@ -169,12 +178,40 @@ video {
   user-select: none;
 }
 
-.play-now-header h2 {
+.play-now-header h3 {
   font-size: 16px;
 }
 
 .play-now-header:hover {
   background: var(--primary);
+}
+
+/* --------FIRST PART-------- */
+
+.first-part{
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  gap: 24px;
+}
+.first-part-content{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 24px;
+}
+.first-part-content img{
+  width: 100%;
+  box-shadow: var(--box-shadow-large);
+  object-fit: cover;
+}
+.first-part-text{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.first-part-content p{
+  font-size: 16px;
 }
 
 /* --------MEDIA SCREEN-------- */
@@ -193,6 +230,9 @@ video {
     display: flex;
   }
   h2{
+    font-size: 48px;
+  }
+  h3{
     font-size: 32px;
   }
   p{
@@ -209,7 +249,7 @@ video {
     transition: background 0.2s;
     user-select: none;
   }
-  .play-now-nav h2 {
+  .play-now-nav h3 {
     font-size: 16px;
   }
 
@@ -224,14 +264,36 @@ video {
   .play-now-header {
     padding: 12px 24px 12px 24px;
   }
-  .play-now-header h2 {
+  .play-now-header h3 {
     font-size: 24px;
+  }
+
+  /* --------FIRST PART-------- */  
+
+  .first-part{
+    padding: 80px;
+  }
+  .first-part-content{
+    flex-direction: row;
+    width: 100%;
+  }
+  .first-part-content img{
+    width: 50%;
+    box-shadow: var(--box-shadow-large);
+    object-fit: cover;
+  }
+  .first-part-text{
+    gap: 24px;
+    padding-left: 48px;
+  }
+  .first-part-content p{
+    font-size: 26px;
   }
 }
 
 @media screen and (min-width: 1100px) {
   .header-container{
     margin-right: 50%;
-    padding: 120px;
+    padding: 120px 120px 200px 120px;
   }
 }

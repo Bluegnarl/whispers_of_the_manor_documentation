@@ -6,4 +6,7 @@
   --surface-3 : #313131;
   --on-surface-0 : #ffffff;
   --on-surface-1 : #E8E6E3;
+  --box-shadow-small: 0px 0px 16px 0px rgba(208, 149, 34, 0.30);
+  --box-shadow-medium: 0px 0px 32px 0px rgba(208, 149, 34, 0.30);
+  --box-shadow-large: 0px 0px 64px 0px rgba(208, 149, 34, 0.30);
 }
