@@ -60,7 +60,7 @@ nav {
 a{
   text-decoration: none;
   font-weight: 300;
-  font-size: 24px;
+  font-size: 20px;
   color: var(--primary);
 }
 
@@ -114,8 +114,6 @@ header {
   width: 100%;
   justify-content: center;
   align-items: center;
-  padding: 50px;
-  gap: 12px;
   /* background: center/cover no-repeat url(./assets/images/defaultImg.png); */
 }
 
@@ -136,6 +134,15 @@ video {
 
 /* HEADER'S CONTENT */
 
+.header-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  gap: 12px;
+}
 .header-content {
   display: flex;
   flex-direction: column;
@@ -172,7 +179,13 @@ video {
 
 /* --------MEDIA SCREEN-------- */
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 650px){
+  .header-container{
+    margin-right: 45%;
+  }
+}
+
+@media screen and (min-width: 800px) {
   .menu-icon{
     display: none;
   }
@@ -184,9 +197,6 @@ video {
   }
   p{
     font-size: 24px;
-  }
-  .header-content {
-    max-width: 410px;
   }
   
   .play-now-nav {
@@ -203,14 +213,25 @@ video {
     font-size: 16px;
   }
 
+  .header-container{
+    gap: 20px;
+    padding: 100px;
+    margin: 0;
+  }
+  .header-content {
+    max-width: 410px;
+  }
   .play-now-header {
-    display: flex;
-    border: solid 2px var(--primary);
-    border-radius: 100px;
     padding: 12px 24px 12px 24px;
-    gap: 10px;
   }
   .play-now-header h2 {
     font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .header-container{
+    margin-right: 50%;
+    padding: 120px;
   }
 }
