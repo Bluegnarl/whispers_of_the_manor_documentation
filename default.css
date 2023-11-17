@@ -189,11 +189,36 @@ video {
 
 /* ----------------FIRST PART---------------- */
 
+
 .first-part{
+  z-index: 5;
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 48px 24px 24px 24px;
   gap: 12px;
+}
+/* .quadrilatere{
+  top: -20%;
+  left: 0;
+  transform: scaleX(-1);
+  position: absolute;
+  height: 150px;
+  object-fit: cover;
+} */
+.quadrilatere{
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  top: -20%;
+  left: 0;
+  object-fit: cover;
+}
+.quadrilatere-2{
+  width: 100%;
+  height: 60%;
+  transform: rotate(-90°);
+  background: var(--on-surface-1);
 }
 .first-part-content{
   display: flex;
