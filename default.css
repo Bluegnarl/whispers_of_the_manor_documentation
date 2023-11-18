@@ -211,6 +211,7 @@ video {
   top: -8%;
   left: 0;
   object-fit: cover;
+  overflow-x: hidden;
 }
 .quadrilatere-2 {
   width: 100%;
