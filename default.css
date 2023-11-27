@@ -252,21 +252,23 @@ video {
   box-shadow: var(--box-shadow-large);
   background: var(--surface-1);
   display: flex;
+  flex-direction: column;
   width: 100%;
+  max-width: 1200px;
 }
 
 .slider-video{
   background: center/cover no-repeat url(./assets/images/defaultImg.png);
   min-width: 55%;
-  height: 350px;
+  height: 200px;
 }
 
 .slider-text-container{
-  padding: 64px;
+  padding: 32px 40px 40px 40px;
 }
 
 .slider-number{
-  font-size: 32px;
+  font-size: 20px;
 }
 
 /* ----------------MEDIA SCREEN---------------- */
@@ -299,6 +301,9 @@ video {
   .quadrilatere-2{
     height: 90px;
   }
+  .slider-number{
+    font-size: 28px;
+  }
 }
 
 @media screen and (min-width: 650px){
@@ -307,7 +312,7 @@ video {
   }
   
   .first-part{
-    padding: 48px 36px 36px 36px;
+    padding: 64px;
     gap: 24px;
   }
   .first-part-content{
@@ -325,7 +330,16 @@ video {
   }
 
   .slider-container{
-      padding: 48px 36px 36px 36px;
+    padding: 64px;
+  }
+  .slider{
+    height: 600px;
+  }
+  .slider-number{
+    font-size: 32px;
+  }
+  .slider-number{
+    font-size: 32px;
   }
 }
 
@@ -335,9 +349,6 @@ video {
   }
   .nav-buttons{
     display: flex;
-  }
-  h2{
-    font-size: 36px;
   }
   h3{
     font-size: 32px;
@@ -404,9 +415,13 @@ video {
     background: linear-gradient(176deg, #675128 -11.15%, #3D2D0D 8.09%, #101010 49.16%)  ;
   }
 
-  .slider-video{
-    height: 300px;
+  .slider{
+    height: 650px;
   }
+  .slider-video{
+    height: 55%;
+  }
+  
 }
 
 @media screen and (min-width: 1050px) {
@@ -417,8 +432,9 @@ video {
   .header-container{
     padding: 100px 0 190px 0;
   }
+
   .slider-video{
-    height: 350px;
+    height: 100%;
   }
 }
 
@@ -445,8 +461,18 @@ video {
   .slider-container{
     padding: 100px 100px 250px 100px;
   }
+  .slider{
+    flex-direction: row;
+    height: auto;
+  }
   .slider-video{
     height: 400px;
+  }
+  .slider-number{
+    font-size: 36px;
+  }
+  .slider-text-container{
+    padding: 64px;
   }
 }
 
@@ -477,6 +503,9 @@ video {
 
   .slider-video{
     height: 450px;
+  }
+  .slider-number{
+    font-size: 40px;
   }
 }
 
