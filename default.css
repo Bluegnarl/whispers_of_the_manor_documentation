@@ -182,6 +182,7 @@ video {
   cursor: pointer;
   transition: background 0.2s;
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .play-now-header h3 {
