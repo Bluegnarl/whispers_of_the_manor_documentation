@@ -37,12 +37,12 @@ h3 {
 }
 h4{
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
 }
 h5{
   font-family: 'Lato', sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 300;
   color: var(--on-surface-1);
 }
@@ -350,14 +350,14 @@ video {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 40px 72px 40px;
-  gap: 12px;
+  padding: 40px;
+  gap: 6px;
 }
 
 .available-soon-text{
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 2px;
 }
 
 footer{
@@ -390,6 +390,12 @@ footer{
   }
   h3{
     font-size: 24px;
+  }
+  h4{
+    font-size: 24px;
+  }
+  h5{
+    font-size: 14px;
   }
   p{
     font-size: 16px;
@@ -424,6 +430,12 @@ footer{
 
   .available-soon{
     gap: 16px;
+  }
+  .available-soon-text-container{
+    gap: 12px;
+  }
+  .available-soon-text{
+    gap: 8px;
   }
 }
 

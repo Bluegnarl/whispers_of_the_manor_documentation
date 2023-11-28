@@ -4,6 +4,7 @@ const logoHeader = document.querySelector('.logo-header');
 const arrowIcon = document.querySelector('.arrow');
 const firstPart = document.querySelector('.first-part');
 const availableSoonLogo = document.querySelector('.available-soon-logo');
+const footerLogo = document.querySelector('.footer-logo');
 
 function onResize(){
     function onResize1(){
@@ -19,9 +20,15 @@ function onResize(){
     function onResize2(){
         if(document.body.clientWidth >= 1600){
             availableSoonLogo.setAttribute("src", "./assets/images/logo-large.svg");
+            footerLogo.setAttribute("src", "./assets/images/logo-medium.svg");
         }
-        else if(document.body.clientWidth < 1600){
+        else if(document.body.clientWidth < 1600 && document.body.clientWidth > 500){
             availableSoonLogo.setAttribute("src", "./assets/images/logo-medium.svg");
+            footerLogo.setAttribute("src", "./assets/images/logo-medium.svg");
+        }
+        else{
+            availableSoonLogo.setAttribute("src", "./assets/images/logo-small.svg");
+            footerLogo.setAttribute("src", "./assets/images/logo-small.svg");
         }
     }
     onResize1();
