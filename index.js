@@ -1,16 +1,33 @@
 // Resize //
 
-const logoHeader = document.querySelector('.logo-header');
-const arrowIcon = document.querySelector('.arrow');
-const firstPart = document.querySelector('.first-part');
-const availableSoonLogo = document.querySelector('.available-soon-logo');
-const footerLogo = document.querySelector('.footer-logo');
+const logoHeader = document.querySelector('.logo-header'),
+    arrowIcon = document.querySelector('.arrow'),
+    firstPart = document.querySelector('.first-part'),
+    availableSoonLogo = document.querySelector('.available-soon-logo'),
+    footerLogo = document.querySelector('.footer-logo'),
+
+    background = document.querySelector('.background'),
+    menuCancelButton = document.querySelectorAll('.menu-icon')[0],
+    menuButton = document.querySelectorAll('.menu-icon')[1],
+    menu = document.querySelector('menu'),
+
+    leftArrow = document.querySelector('.left-arrow'),
+    sliderStick1 = document.querySelector('.slider-stick-1'),
+    sliderStick2 = document.querySelector('.slider-stick-2'),
+    sliderStick3 = document.querySelector('.slider-stick-3'),
+    rightArrow = document.querySelector('.right-arrow'),
+
+    sliderVideo = document.querySelector('.slider-video'),
+    sliderNumber = document.querySelector('.slider-number'),
+    sliderTitle = document.querySelector('.slider-title'),
+    sliderText = document.querySelector('.slider-text');
 
 function onResize(){
     function onResize1(){
         if(document.body.clientWidth >= 800){
             logoHeader.setAttribute("src", "./assets/images/logo-large.svg");
             arrowIcon.setAttribute("src", "./assets/images/arrow-large.svg");
+            background.style.display = 'none';
         }
         else if(document.body.clientWidth < 800){
             logoHeader.setAttribute("src", "./assets/images/logo-medium.svg");
@@ -31,8 +48,25 @@ function onResize(){
             footerLogo.setAttribute("src", "./assets/images/logo-small.svg");
         }
     }
+    function onResize3(){
+        if(document.body.clientWidth >= 450){
+            leftArrow.setAttribute("src", "./assets/images/left-arrow.svg");
+            sliderStick1.setAttribute("src", "./assets/images/slider-stick.svg");
+            sliderStick2.setAttribute("src", "./assets/images/slider-stick.svg");
+            sliderStick3.setAttribute("src", "./assets/images/slider-stick.svg");
+            rightArrow.setAttribute("src", "./assets/images/right-arrow.svg");
+        }
+        else if(document.body.clientWidth < 450){
+            leftArrow.setAttribute("src", "./assets/images/left-arrow-small.svg");
+            sliderStick1.setAttribute("src", "./assets/images/slider-stick-small.svg");
+            sliderStick2.setAttribute("src", "./assets/images/slider-stick-small.svg");
+            sliderStick3.setAttribute("src", "./assets/images/slider-stick-small.svg");
+            rightArrow.setAttribute("src", "./assets/images/right-arrow-small.svg");
+        }
+    }
     onResize1();
     onResize2();
+    onResize3();
 }
 onResize();
 
@@ -44,18 +78,24 @@ function onScrollDown(){
 window.addEventListener("resize", () => onResize());
 document.body.addEventListener("scroll", () => onScrollDown());
 
+// Menu //
+
+menuButton.addEventListener('click', () => {
+    menu.style.right = '0';
+    background.style.display = 'flex';
+})
+
+background.addEventListener('click', () => {
+    menu.style.right = '-300px';
+    background.style.display = 'none';
+})
+
+menuCancelButton.addEventListener('click', () => {
+    menu.style.right = '-300px';
+    background.style.display = 'none';
+})
+
 // Slider //
-
-const leftArrow = document.querySelector('.left-arrow');
-const sliderStick1 = document.querySelector('.slider-stick-1');
-const sliderStick2 = document.querySelector('.slider-stick-2');
-const sliderStick3 = document.querySelector('.slider-stick-3');
-const rightArrow = document.querySelector('.right-arrow');
-
-const sliderVideo = document.querySelector('.slider-video');
-const sliderNumber = document.querySelector('.slider-number');
-const sliderTitle = document.querySelector('.slider-title');
-const sliderText = document.querySelector('.slider-text');
 
 let sliderPage = 1;
 
@@ -112,5 +152,4 @@ function slider(){
         sliderText.innerText = "Stay attentive to the elements around you. They will allow you to solve puzzles and riddles that are important for your progress.";
     }
 }
-
 slider();
