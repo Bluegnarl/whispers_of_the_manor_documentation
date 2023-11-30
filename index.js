@@ -117,7 +117,9 @@ function slider(){
     console.log(sliderPage);
     if(sliderPage == 1){
         leftArrow.style.filter = 'brightness(0.15)'
+        leftArrow.style.cursor = 'context-menu'
         rightArrow.style.filter = 'brightness(1)'
+        rightArrow.style.cursor = 'pointer'
         sliderStick1.style.filter = 'brightness(1)'
         sliderStick2.style.filter = 'brightness(0.15)'
         sliderStick3.style.filter = 'brightness(0.15)'
@@ -129,7 +131,9 @@ function slider(){
     }
     else if(sliderPage == 2){
         leftArrow.style.filter = 'brightness(1)'
+        leftArrow.style.cursor = 'pointer'
         rightArrow.style.filter = 'brightness(1)'
+        rightArrow.style.cursor = 'pointer'
         sliderStick1.style.filter = 'brightness(0.15)'
         sliderStick2.style.filter = 'brightness(1)'
         sliderStick3.style.filter = 'brightness(0.15)'
@@ -141,7 +145,9 @@ function slider(){
     }
     else if(sliderPage == 3){
         leftArrow.style.filter = 'brightness(1)'
+        leftArrow.style.cursor = 'pointer'
         rightArrow.style.filter = 'brightness(0.15)'
+        rightArrow.style.cursor = 'context-menu'
         sliderStick1.style.filter = 'brightness(0.15)'
         sliderStick2.style.filter = 'brightness(0.15)'
         sliderStick3.style.filter = 'brightness(1)'
