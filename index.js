@@ -1,3 +1,9 @@
+const headerVideo = document.querySelector('video');
+
+headerVideo.addEventListener('pause', () => {
+    headerVideo.play();
+})
+
 // Resize //
 
 const logoHeader = document.querySelector('.logo-header'),
@@ -23,6 +29,7 @@ const logoHeader = document.querySelector('.logo-header'),
     sliderText = document.querySelector('.slider-text');
 
 function onResize(){
+    headerVideo.play();
     function onResize1(){
         if(document.body.clientWidth >= 800){
             logoHeader.setAttribute("src", "./assets/images/logo-large.svg");

@@ -128,7 +128,7 @@ menu{
   display: flex;
   flex-direction: column;
   width: 300px;
-  height: 100vh;
+  height: 100dvh;
   position: absolute;
   background: var(--surface-2);
   right: -300px;
