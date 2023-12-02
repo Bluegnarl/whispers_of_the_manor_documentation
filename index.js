@@ -66,13 +66,7 @@ function onResize() {
 }
 onResize();
 
-function onScrollDown() {
-  firstPart.style.opacity = "100%";
-  firstPart.style.transform = "translateY(0)";
-}
-
 window.addEventListener("resize", () => onResize());
-document.body.addEventListener("scroll", () => onScrollDown());
 
 // Header Video Anti-Pause //
 
