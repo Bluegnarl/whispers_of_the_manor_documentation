@@ -23,7 +23,7 @@ const logoHeader = document.querySelector(".logo-header"),
 // Try catch data //
 
 try {
-  fetch("./data/slider.json")
+  fetch("./data/sliderHome.json")
     .then((response) => response.json())
     .then((json) => buildSliders(json));
 } catch (error) {
@@ -41,28 +41,32 @@ function onResize() {
       logoHeader.setAttribute("src", "./assets/images/logo-large.svg");
       arrowIcon.setAttribute("src", "./assets/images/arrow-large.svg");
       background.style.display = "none";
-    } else if (document.body.clientWidth < 800) {
+    } else if (document.body.clientWidth < 800 && document.body.clientWidth > 340) {
       logoHeader.setAttribute("src", "./assets/images/logo-medium.svg");
       arrowIcon.setAttribute("src", "./assets/images/arrow-small.svg");
+      menu.style.right = '-300px';
+    }
+    else if(document.body.clientWidth <= 340){
+        menu.style.right = '-100%';
     }
   }
-  function onResize2() {
-    if (document.body.clientWidth >= 1600) {
-      availableSoonLogo.setAttribute("src", "./assets/images/logo-large.svg");
-      footerLogo.setAttribute("src", "./assets/images/logo-medium.svg");
-    } else if (
-      document.body.clientWidth < 1600 &&
-      document.body.clientWidth > 500
-    ) {
-      availableSoonLogo.setAttribute("src", "./assets/images/logo-medium.svg");
-      footerLogo.setAttribute("src", "./assets/images/logo-medium.svg");
-    } else {
-      availableSoonLogo.setAttribute("src", "./assets/images/logo-small.svg");
-      footerLogo.setAttribute("src", "./assets/images/logo-small.svg");
-    }
-  }
+//   function onResize2() {
+//     if (document.body.clientWidth >= 1600) {
+//       availableSoonLogo.setAttribute("src", "./assets/images/logo-large.svg");
+//       footerLogo.setAttribute("src", "./assets/images/logo-medium.svg");
+//     } else if (
+//       document.body.clientWidth < 1600 &&
+//       document.body.clientWidth > 500
+//     ) {
+//       availableSoonLogo.setAttribute("src", "./assets/images/logo-medium.svg");
+//       footerLogo.setAttribute("src", "./assets/images/logo-medium.svg");
+//     } else {
+//       availableSoonLogo.setAttribute("src", "./assets/images/logo-small.svg");
+//       footerLogo.setAttribute("src", "./assets/images/logo-small.svg");
+//     }
+//   }
   onResize1();
-  onResize2();
+//   onResize2();
 }
 onResize();
 
