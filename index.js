@@ -25,12 +25,12 @@ const logoHeader = document.querySelector(".logo-header"),
 function getCurrentPage() {
   const pathName = window.location.pathname;
 
-  if (pathName.includes("index.html") || pathName.includes("")) {
-    return "index";
-  } else if (pathName.includes("design.html")) {
+  if (pathName.includes("design.html")) {
     return "design";
   } else if (pathName.includes("story.html")) {
     return "story";
+  } else{
+    return "index";
   }
 }
 getCurrentPage();
