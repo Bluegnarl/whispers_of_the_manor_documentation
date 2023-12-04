@@ -29,7 +29,7 @@ function getCurrentPage() {
     return "design";
   } else if (pathName.includes("story.html")) {
     return "story";
-  } else{
+  } else {
     return "index";
   }
 }
@@ -155,12 +155,16 @@ function createSliders(item) {
     sliderStick2.classList.add("slider-stick");
     sliderStick1.setAttribute("src", "./assets/images/slider-stick.svg");
     sliderStick2.setAttribute("src", "./assets/images/slider-stick.svg");
-    if(sliderStickNumber === 3){
+    if (sliderStickNumber === 3) {
       sliderStick3.classList.add("slider-stick-3");
       sliderStick3.classList.add("slider-stick");
       sliderStick3.setAttribute("src", "./assets/images/slider-stick.svg");
     }
-    sliderControlsIndicator.append(sliderStick1, sliderStick2, (sliderStickNumber === 3) ? sliderStick3 : '');
+    sliderControlsIndicator.append(
+      sliderStick1,
+      sliderStick2,
+      sliderStickNumber === 3 ? sliderStick3 : ""
+    );
   } else {
     const sliderText = document.createElement("div");
     sliderText.classList.add("slider-text");
@@ -191,7 +195,7 @@ function sliderPageChange(direction) {
         sliderStick3.style.filter = "brightness(0.15)";
       }
       rightArrow.style.filter = "brightness(1)";
-      rightArrow.style.cursor = 'pointer';
+      rightArrow.style.cursor = "pointer";
       break;
     case 1:
       leftArrow.style.filter = "brightness(1)";
@@ -202,25 +206,22 @@ function sliderPageChange(direction) {
         sliderStick3.style.filter = "brightness(0.15)";
         rightArrow.style.filter = "brightness(1)";
         rightArrow.style.cursor = "pointer";
-      }
-      else{
+      } else {
         rightArrow.style.filter = "brightness(0.15)";
         rightArrow.style.cursor = "context-menu";
       }
       break;
 
-      case 2:
-        if(sliderStickNumber === 3){
-          console.log('bite');
-          leftArrow.style.filter = "brightness(1)";
-          sliderStick2.style.filter = "brightness(0.15)";
-          sliderStick3.style.filter = "brightness(1)";
-          rightArrow.style.filter = "brightness(0.15)";
-          rightArrow.style.cursor = "context-menu";
-        }
-        break;
-
-
+    case 2:
+      if (sliderStickNumber === 3) {
+        console.log("bite");
+        leftArrow.style.filter = "brightness(1)";
+        sliderStick2.style.filter = "brightness(0.15)";
+        sliderStick3.style.filter = "brightness(1)";
+        rightArrow.style.filter = "brightness(0.15)";
+        rightArrow.style.cursor = "context-menu";
+      }
+      break;
 
     default:
       break;

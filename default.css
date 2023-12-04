@@ -384,6 +384,9 @@ header{
   display: flex;
   gap: 8px;
 }
+.slider-controls-indicator-content{
+  
+}
 .slider-stick {
   transition: filter 0.2s;
 }
