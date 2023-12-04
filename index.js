@@ -45,8 +45,6 @@ let sliderTextVar = 0;
 const sliderText1 = document.createElement("div"),
   sliderStick1 = document.createElement("img"),
   sliderStick2 = document.createElement("img");
-console.log(sliderStickNumber);
-
 let sliderStick3;
 
 if (sliderStickNumber === 3) {
@@ -73,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
   } catch (error) {
     console.log(error);
   } finally {
-    console.log("loaded");
+    console.log("Page successfully loaded");
   }
 });
 
@@ -214,7 +212,6 @@ function sliderPageChange(direction) {
 
     case 2:
       if (sliderStickNumber === 3) {
-        console.log("bite");
         leftArrow.style.filter = "brightness(1)";
         sliderStick2.style.filter = "brightness(0.15)";
         sliderStick3.style.filter = "brightness(1)";
