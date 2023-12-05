@@ -1,7 +1,7 @@
 const logoHeader = document.querySelector(".logo-header"),
   arrowIcon = document.querySelector(".arrow"),
   headerVideo = document.querySelector("video"),
-  headerVideoContainer = document.querySelector('.video'),
+  headerVideoContainer = document.querySelector(".video"),
   firstPart = document.querySelector(".first-part"),
   availableSoonLogo = document.querySelector(".available-soon-logo"),
   footerLogo = document.querySelector(".footer-logo"),
@@ -14,15 +14,16 @@ const logoHeader = document.querySelector(".logo-header"),
   sliderVideo = document.querySelector(".slider-video"),
   sliderNumber = document.querySelector(".slider-number"),
   sliderTitle = document.querySelector(".slider-title"),
-  sliderText = document.querySelector(".slider-text");
+  sliderText = document.querySelector(".slider-text"),
+  sliderVideoContentContainer = document.querySelector(
+    ".slider-video-content-container"
+  );
 (sliderTexts = document.querySelector(".slider-texts")),
   (sliderControlsIndicator = document.querySelector(
     ".slider-controls-indicator"
   )),
   (data = []);
 scrollDown = document.querySelector(".scroll-down");
-
-
 
 // GET CURRENT PAGE //
 
@@ -47,6 +48,7 @@ else sliderStickNumber = 2;
 
 let sliderTextVar = 0;
 const sliderText1 = document.createElement("div"),
+  sliderVideoContent1 = document.createElement("img"),
   sliderStick1 = document.createElement("img"),
   sliderStick2 = document.createElement("img");
 let sliderStick3;
@@ -58,7 +60,7 @@ if (sliderStickNumber === 3) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.body.style.opacity = '1';
+  document.body.style.opacity = "1";
   try {
     if (currentPage === "index") {
       fetch("./data/sliderHome.json")
@@ -110,9 +112,9 @@ document.body.addEventListener("scroll", () => {
 
 // Header Video //
 
-headerVideo.addEventListener('loadeddata', () => {
-  headerVideoContainer.style.opacity = '1';
-})
+headerVideo.addEventListener("loadeddata", () => {
+  headerVideoContainer.style.opacity = "1";
+});
 
 headerVideo.addEventListener("pause", () => {
   headerVideo.play();
@@ -150,17 +152,20 @@ let sliderPage = 0;
 function buildSliders(res) {
   data.push(res);
   data[0].map((el) => createSliders(el));
-  data[0].map((el) => sliderPageChange(null, el));
 }
 
 function createSliders(item) {
   if (sliderTextVar === 0) {
     sliderText1.classList.add("slider-text");
+    sliderVideoContent1.classList.add("slider-video-content");
+    sliderVideoContent1.classList.add("slider-video-content-1");
     sliderText1.innerHTML += `
         <h2 class="slider-number">0${item.number}</h3>
         <h2>${item.title}</h2>
         <p>${item.text}</p>
       `;
+    sliderVideoContent1.setAttribute("src", item.img);
+    sliderVideoContentContainer.append(sliderVideoContent1);
     sliderTexts.append(sliderText1);
     sliderTextVar++;
     sliderStick1.classList.add("slider-stick-1");
@@ -180,7 +185,11 @@ function createSliders(item) {
       sliderStickNumber === 3 ? sliderStick3 : ""
     );
   } else {
-    const sliderText = document.createElement("div");
+    const sliderText = document.createElement("div"),
+      sliderVideoContent = document.createElement("img");
+    sliderVideoContent.classList.add("slider-video-content");
+    sliderVideoContent.setAttribute("src", item.img);
+    sliderVideoContentContainer.append(sliderVideoContent);
     sliderText.classList.add("slider-text");
     sliderText.innerHTML += `
         <h2 class="slider-number">0${item.number}</h3>
@@ -191,12 +200,14 @@ function createSliders(item) {
   }
 }
 
-function sliderPageChange(direction, item) {
+function sliderPageChange(direction) {
   if (direction === "right" && sliderPage < sliderStickNumber - 1) {
     sliderPage++;
+    sliderVideoContent1.style.marginRight = sliderPage * -100 + '%';
     sliderText1.style.marginLeft = sliderPage * -100 + "%";
   } else if (direction === "left" && sliderPage > 0) {
     sliderPage--;
+    sliderVideoContent1.style.marginRight = sliderPage * -100 + '%';
     sliderText1.style.marginLeft = sliderPage * -100 + "%";
   }
   switch (sliderPage) {
