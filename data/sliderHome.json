@@ -2,16 +2,19 @@
   {
     "number": "1",
     "title": "Exploration",
-    "text": "Explore the manor and the horrific history of this place."
+    "text": "Explore the manor and the horrific history of this place.",
+    "img": "./assets/images/defaultImg.png"
   },
   {
     "number": "2",
     "title": "Conversation",
-    "text": "Listen to the characters around you and learn more about what's going on. Build your story by making choices."
+    "text": "Listen to the characters around you and learn more about what's going on. Build your story by making choices.",
+    "img": "./assets/images/defaultImg.png"
   },
   {
     "number": "3",
     "title": "Solution",
-    "text": "Stay attentive to the elements around you. They will allow you to solve puzzles and riddles that are important for your progress."
+    "text": "Stay attentive to the elements around you. They will allow you to solve puzzles and riddles that are important for your progress.",
+    "img": "./assets/images/defaultImg.png"
   }
 ]

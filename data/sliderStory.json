@@ -2,11 +2,13 @@
   {
     "number": "1",
     "title": "David Turner",
-    "text": "He is the main character of the game."
+    "text": "He is the main character of the game.",
+    "img": "./assets/images/defaultImg.png"
   },
   {
     "number": "2",
     "title": "Morgana Shadow",
-    "text": "She is another character of the game."
+    "text": "She is another character of the game.",
+    "img": "./assets/images/secondImg.png"
   }
 ]

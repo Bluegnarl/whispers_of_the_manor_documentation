@@ -19,6 +19,9 @@ const logoHeader = document.querySelector(".logo-header"),
     ".slider-controls-indicator"
   )),
   (data = []);
+scrollDown = document.querySelector(".scroll-down");
+
+
 
 // GET CURRENT PAGE //
 
@@ -54,6 +57,7 @@ if (sliderStickNumber === 3) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  document.body.style.opacity = '1';
   try {
     if (currentPage === "index") {
       fetch("./data/sliderHome.json")
@@ -97,6 +101,12 @@ onResize();
 
 window.addEventListener("resize", () => onResize());
 
+document.body.addEventListener("scroll", () => {
+  scrollDown.style.animationPlayState = "paused";
+  scrollDown.style.opacity = "1";
+  scrollDown.style.animation = "onlyTranslateY .4s normal forwards ease-in-out";
+});
+
 // Header Video Anti-Pause //
 
 headerVideo.addEventListener("pause", () => {
@@ -135,6 +145,7 @@ let sliderPage = 0;
 function buildSliders(res) {
   data.push(res);
   data[0].map((el) => createSliders(el));
+  data[0].map((el) => sliderPageChange(null, el));
 }
 
 function createSliders(item) {
@@ -175,7 +186,7 @@ function createSliders(item) {
   }
 }
 
-function sliderPageChange(direction) {
+function sliderPageChange(direction, item) {
   if (direction === "right" && sliderPage < sliderStickNumber - 1) {
     sliderPage++;
     sliderText1.style.marginLeft = sliderPage * -100 + "%";
@@ -185,6 +196,7 @@ function sliderPageChange(direction) {
   }
   switch (sliderPage) {
     case 0:
+      // sliderVideo.setAttribute("src", item.img);
       leftArrow.style.filter = "brightness(0.15)";
       leftArrow.style.cursor = "context-menu";
       sliderStick1.style.filter = "brightness(1)";
@@ -196,6 +208,7 @@ function sliderPageChange(direction) {
       rightArrow.style.cursor = "pointer";
       break;
     case 1:
+      // sliderVideo.setAttribute("src", item.img);
       leftArrow.style.filter = "brightness(1)";
       leftArrow.style.cursor = "pointer";
       sliderStick1.style.filter = "brightness(0.15)";
@@ -212,6 +225,7 @@ function sliderPageChange(direction) {
 
     case 2:
       if (sliderStickNumber === 3) {
+        // sliderVideo.setAttribute("src", item.img);
         leftArrow.style.filter = "brightness(1)";
         sliderStick2.style.filter = "brightness(0.15)";
         sliderStick3.style.filter = "brightness(1)";
