@@ -3,12 +3,14 @@
     "number": "1",
     "title": "Clocktower",
     "text": "The game's decorations and most characters’ sprites come from Clocktower, released on the first PlayStation.",
-    "img": "./assets/images/secondImg.png"
+    "img": "./assets/images/secondImg.png",
+    "character": "false"
   },
   {
     "number": "2",
     "title": "Characters",
     "text": "The main character and all characters’ drawings during the dialogues were made by myself with my drawing skills.",
-    "img": "./assets/images/defaultImg.png"
+    "img": "./assets/images/defaultImg.png",
+    "character": "false"
   }
 ]

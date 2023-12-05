@@ -2,13 +2,15 @@
   {
     "number": "1",
     "title": "David Turner",
-    "text": "He is the main character of the game.",
-    "img": "./assets/images/defaultImg.png"
+    "text": "He is the inspector who is on the Whispering Shadows Manor case.",
+    "img": "./assets/images/david.png",
+    "character": true
   },
   {
     "number": "2",
     "title": "Morgana Shadow",
-    "text": "She is another character of the game.",
-    "img": "./assets/images/secondImg.png"
+    "text": "She is the leader of the Whispering Shadows satanic sect.",
+    "img": "./assets/images/morgana.png",
+    "character": true
   }
 ]
