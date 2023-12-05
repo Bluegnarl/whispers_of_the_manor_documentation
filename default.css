@@ -210,7 +210,6 @@ header {
   width: 100%;
   justify-content: center;
   align-items: center;
-  /* background: center/cover no-repeat url(./assets/images/defaultImg.png); */
 }
 
 /* HEADER'S BACKGROUND VIDEO */
@@ -228,6 +227,8 @@ video {
   z-index: -1;
   height: 100%;
   width: 100%;
+  transition: opacity .5s;
+  opacity: 0;
 }
 
 /* HEADER'S CONTENT */
@@ -239,7 +240,7 @@ video {
   height: fit-content;
   justify-content: center;
   align-items: center;
-  padding: 150px 0 100px 0;
+  padding: 150px 12px 100px 12px;
   gap: 12px;
 }
 .header-content {
@@ -580,7 +581,7 @@ footer {
     margin: -16px;
   }
   .header-container {
-    padding: 120px 16px 64px 12px;
+    padding: 120px 20px 64px 20px;
     gap: 16px;
   }
   .play-now-header {
@@ -657,7 +658,7 @@ footer {
   }
 
   .header-container {
-    padding: 150px 0 130px 0;
+    padding: 150px 12px 130px 12px;
   }
   .header-text {
     font-size: 16px;
@@ -710,7 +711,7 @@ footer {
     margin: 12px;
   }
   .header-container {
-    padding: 150px 0 130px 0;
+    padding: 150px 12px 130px 12px;
   }
 
   .first-part {

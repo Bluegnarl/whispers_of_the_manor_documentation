@@ -1,6 +1,7 @@
 const logoHeader = document.querySelector(".logo-header"),
   arrowIcon = document.querySelector(".arrow"),
   headerVideo = document.querySelector("video"),
+  headerVideoContainer = document.querySelector('.video'),
   firstPart = document.querySelector(".first-part"),
   availableSoonLogo = document.querySelector(".available-soon-logo"),
   footerLogo = document.querySelector(".footer-logo"),
@@ -107,7 +108,11 @@ document.body.addEventListener("scroll", () => {
   scrollDown.style.animation = "onlyTranslateY .4s normal forwards ease-in-out";
 });
 
-// Header Video Anti-Pause //
+// Header Video //
+
+headerVideo.addEventListener('loadeddata', () => {
+  headerVideoContainer.style.opacity = '1';
+})
 
 headerVideo.addEventListener("pause", () => {
   headerVideo.play();
