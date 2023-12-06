@@ -131,6 +131,16 @@ menuButton.addEventListener("click", () => {
   background.style.display = "flex";
 });
 
+function menuClosing(){
+  console.log('bite');
+  if (document.body.clientWidth <= 340) {
+    menu.style.right = "-100%";
+  } else {
+    menu.style.right = "-300px";
+  }
+  background.style.display = "none";
+}
+
 background.addEventListener("click", () => {
   if (document.body.clientWidth <= 340) {
     menu.style.right = "-100%";
