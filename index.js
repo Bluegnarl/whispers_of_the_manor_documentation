@@ -40,13 +40,14 @@ function getCurrentPage() {
 }
 getCurrentPage();
 
+// Slider Elements Creation //
+
 let sliderStickNumber;
 let sliderCharacter = false;
 const currentPage = getCurrentPage();
 
 if (currentPage === "index") sliderStickNumber = 3;
 else sliderStickNumber = 2;
-
 if (currentPage === "story") sliderCharacter = true;
 
 let sliderTextVar = 0;
@@ -59,9 +60,9 @@ let sliderStick3;
 
 if (sliderStickNumber === 3) {
   sliderStick3 = document.createElement("img");
-} else {
-  sliderStick3 = document.getElementsByClassName(".slider-stick-null");
-}
+} 
+
+// DOMContentLoaded //
 
 document.addEventListener("DOMContentLoaded", () => {
   document.body.style.opacity = "1";
@@ -271,7 +272,6 @@ function sliderPageChange(direction) {
 
     case 2:
       if (sliderStickNumber === 3) {
-        // sliderVideo.setAttribute("src", item.img);
         leftArrow.style.filter = "brightness(1)";
         sliderStick2.style.filter = "brightness(0.15)";
         sliderStick3.style.filter = "brightness(1)";
