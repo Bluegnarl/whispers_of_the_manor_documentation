@@ -3,5 +3,5 @@
   Whispers of the Manor Documentation is a documentation website which is dedicated to my online game, Whispers of the Manor (game release canceled)
 </p>
 <p>
-  Developed in Vanilla JS, without any framework.
+  Developed in HTML, CSS and Vanilla JS, without any framework.
 </p>
